@@ -10,23 +10,29 @@ body{
     box-sizing: border-box;
     font-size: 14px;
     font-family: 'Montserrat', 'sans-serif';
+    background-color: var(--cream);
 }
 
 main{
-    border:1px solid red;
     height:100vh;
     display:flex;
     justify-content:center;
 }
 article{
     width:40%;
-    border:1px solid green;
     margin:auto;
     display:flex;
     height:50vh;
+    border-radius:0.8rem;
+    background-color: var(--white);
 }
 
 img{
     with:50%;
     height: 100%;
+    border-radius:0.8rem 0 0 0.8rem;
+}
+
+section{
+    width:50%;
 }
