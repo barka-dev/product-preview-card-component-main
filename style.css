@@ -1,5 +1,6 @@
 :root{
     --dark-cyan: hsl(158, 36%, 37%);
+    --dark-cyan2: hsl(158, 25%, 26%);
     --cream: hsl(30, 38%, 92%);
     --very-dark-blue: hsl(212, 21%, 14%);
     --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -11,28 +12,95 @@ body{
     font-size: 14px;
     font-family: 'Montserrat', 'sans-serif';
     background-color: var(--cream);
+    color: var(--dark-grayish-blue);
+    font-weight:500;
+    padding:0;
+    margin:0;
 }
 
 main{
     height:100vh;
     display:flex;
     justify-content:center;
+    align-items:center;
 }
 article{
-    width:40%;
-    margin:auto;
-    display:flex;
-    height:50vh;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 200px auto;
+    gap:10px;
+    max-width: 70rem;
+    /* height:50%; */
     border-radius:0.8rem;
     background-color: var(--white);
 }
 
-img{
-    with:50%;
-    height: 100%;
+article > section.product{
+    background-image:url('./images/image-product-desktop.jpg');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
     border-radius:0.8rem 0 0 0.8rem;
+    max-width:40rem;
 }
 
-section{
-    width:50%;
+section.container{
+    border:1px solid red;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    max-width:40rem;
 }
+section p:first-of-type{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+p{
+    margin:0;
+    padding:0;
+}
+
+h1, strong{
+    font-family:'Fraunces';
+    font-weight:700;
+    font-size: 2rem;
+}
+
+h1{
+    color:var(--very-dark-blue); 
+    padding:0;
+    margin:0;
+
+}
+
+section p:nth-of-type(2){
+    line-height:1.5rem;
+}
+section.price{
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+}
+
+strong{
+    color:var(--dark-cyan);
+}
+
+button{
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    padding:1rem 0;
+    border-radius: 0.4rem;
+    border:none;
+    cursor:pointer;
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    gap:0.5rem;
+}
+
+button:hover{
+    background-color:var(--dark-cyan2);
+}
+
