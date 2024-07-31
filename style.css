@@ -1,6 +1,6 @@
 :root{
     --dark-cyan: hsl(158, 36%, 37%);
-    --dark-cyan2: hsl(158, 25%, 26%);
+    --darker-cyan: hsl(158, 25%, 26%);
     --cream: hsl(30, 38%, 92%);
     --very-dark-blue: hsl(212, 21%, 14%);
     --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -101,14 +101,25 @@ strong{
 
 button{
     background-color: var(--dark-cyan);
-    color: var(--white);
-    padding: .8em;
+    padding: .8em 0;
     border-radius: 8px;
     border:none;
-    font-weight: 700;
     margin-bottom:0.5em;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
 }
 
+button span{
+    font-weight: 700;
+    color: var(--white);
+}
+
+button:hover{
+    background-color: var(--darker-cyan);
+}
 
 @media screen and (min-width: 600px){
     article{
