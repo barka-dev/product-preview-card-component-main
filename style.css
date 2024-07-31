@@ -56,13 +56,22 @@ section{
     padding: 1.3em 1.8em;
     display:grid;
     grid-template-columns: repeat(8, 1fr);
-    gap:1em;
+    gap:1.3em;
     align-items:center;
     /* border:1px solid red; */
 }
 
 p, h1, button{
-    grid-column: span 8;
+    grid-column: 1 / 9;
+}
+
+strong{
+    grid-column: 1 / 5;
+}
+
+del{
+    grid-column: 6 / 9; 
+    align-self:center;
 }
 
 p{
@@ -104,4 +113,48 @@ button{
     border:none;
     font-weight: 700;
     margin-bottom:0.5em;
+}
+
+/* custom size */
+@media screen and (min-width: 420px){
+    article{
+        width: 80%;
+    }
+}
+
+/* custom size */
+@media screen and (min-width: 460px){
+    article{
+        width: 70%;
+    }
+}
+
+/* custom size */
+@media screen and (min-width: 540px){
+    article{
+        width: 60%;
+    }
+}
+
+
+
+/* small tablet */
+@media screen and (min-width: 600px){
+    article{
+        width: 40em;
+    }
+
+    picture{
+        grid-column: span 4;
+        grid-row: 1;
+    }
+    picture img{
+        height:100%;
+        border-radius:10px 0 0 10px;
+    }
+
+    section{
+        grid-column: span 4;
+        grid-row: 1;
+    }
 }
